@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="stylesheets\index.css" />
     <title>{% block title %} {% endblock %} - FlaskApp</title>
     <style>
         .post {
             padding: 10px;
             margin: 5px;
-            background-color: #f3f3f3
+            background-color: #eef1f1
         }
 
         nav a {
@@ -32,8 +31,8 @@
     
         <nav>
             <a href="{{ url_for('index') }}">Home</a>
-            <a href="#">Admin</a>
-            <a href="#">Reservations</a>
+            <a href="{{ url_for('admin') }}">Admin</a>
+            <a href="{{ url_for('reservations') }}">Reservations</a>
         </nav>
         <hr>
         <div class="content">

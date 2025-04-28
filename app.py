@@ -17,8 +17,15 @@ def dict_factory(cursor, row):
 
 @app.route('/')
 def index():
-
     return render_template('index.html')
+
+@app.route('/admin/')
+def admin():
+    return render_template('admin.html')
+
+@app.route('/reservations')
+def reservations():
+    return render_template('reservations.html')
 
     #get a db connection
     # conn = sqlite3.connect('reservations.db')
