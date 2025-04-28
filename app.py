@@ -17,13 +17,14 @@ def dict_factory(cursor, row):
 
 @app.route('/')
 def index():
+
+    return render_template('index.html')
+
     #get a db connection
     # conn = sqlite3.connect('reservations.db')
     # conn.row_factory = dict_factory
     # cur = conn.cursor()
     # all_reservations = cur.execute().fetchall()
-
-    return render_template('index.html')
 
 #run the application
 app.run()
