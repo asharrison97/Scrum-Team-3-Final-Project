@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html>
+    <body>
+        <div style="border:1px solid black;width:65vw;margin:0 auto" align="center">
+            <p class="big-text" style="font-size:30px"><b>IT-4320 Trip Reservation System</b></p>
+            <hr style="border-top:1px solid black;margin-left:25px;margin-right:25px;"></hr>
+                <p align="left" style="margin-left:25px;">Welcome to the IT-4320 reservation system. Use the select box to choose whether
+                    to make a reservation or log in as administrator.</p>
+            <label for="options" style="margin-left:-54vw;">Choose Menu Option:</label><br>
+            <form method="POST" action="{{ url_for('index') }}">
+                <select name="options" id="options" style="margin-left:-55vw;">
+                    <option value="default">Choose an Option</option>
+                    <option value="administrator">Admin Login</option>
+                    <option value="reservations">Reserve a Seat</option>
+                </select><br></br>
+                <input type="submit" value="Submit" class="myButton" style="margin-left:-59.3vw;"><br></br>
+            </form>
+        </div>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Administrator Login {% endblock %}</h1>
+    <hr>
+
+    <form method="get">
+        <label>Username</label><br>
+        <input type="text" name="username" placeholder=""
+        value="">
+        </input>
+        <br>
+        <br>
+
+        <label>Password</label><br>
+        <input type="text" name="password" placeholder=""
+        value="">
+        </input>
+        <br>
+        <br>
+        <button type="submit">LOGIN</button>
+
+    </form>
+    <hr>
+
+{% endblock %}
