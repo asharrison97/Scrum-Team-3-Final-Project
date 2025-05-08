@@ -80,17 +80,6 @@ def index_get_post():
     elif select == "reservations":
         return redirect(url_for('reservations'))
 
-    
-#@app.route('/', methods=('POST',))
-#def index_post():
-#    destination = request.form['options']
-#    if destination is "administrator":
-#        return redirect(url_for('admin'))
-#   elif destination is "reservations":
-#       return redirect(url_for('reservations'))
-#    else: flash('You must input a valid option!')
-#    return redirect(url_for('index'))
-
 # Logic for loading admin page with GET and POST methods.
 @app.route('/admin/', methods=('GET',))
 def admin():
